@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="userLoginPane" prefHeight="427.0" prefWidth="579.0" styleClass="loginbg" stylesheets="@RoomSelectionUI.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupproject.controllers.UserLoginController">
+   <children>
+      <Label layoutX="79.0" layoutY="173.0" prefHeight="66.0" prefWidth="162.0" text="USER ID:">
+         <font>
+            <Font name="Monaco" size="26.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ff1515" />
+                  <Stop color="#2c7ac7" offset="0.4646840148698885" />
+                  <Stop color="#57d61cf0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="79.0" layoutY="264.0" prefHeight="66.0" prefWidth="342.0" text="USER PASSWORD:">
+         <font>
+            <Font name="Monaco" size="26.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ff1515" />
+                  <Stop color="#339e33" offset="0.4646840148698885" />
+                  <Stop color="#57d61cf0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="userIdTextField" layoutX="316.0" layoutY="192.0" promptText="user id" style="-fx-background-color: #3CBC8D; -fx-background-radius: 15; -fx-text-fill: #139EDB;" />
+      <Button blendMode="DIFFERENCE" layoutX="69.0" layoutY="349.0" mnemonicParsing="false" onAction="#logIn" style="-fx-background-radius: 30;" text="LOG IN">
+         <font>
+            <Font name="Apple LiGothic Medium" size="24.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ff1515" />
+                  <Stop color="#325487" offset="0.4646840148698885" />
+                  <Stop color="#57d61cf0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button blendMode="DIFFERENCE" layoutX="218.0" layoutY="349.0" mnemonicParsing="false" onAction="#goToRegister" style="-fx-background-radius: 30;" text="REGISTER">
+         <font>
+            <Font name="Apple LiGothic Medium" size="24.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#9d17ff" />
+                  <Stop color="#9d17ff" offset="0.007434944237918215" />
+                  <Stop color="#565ac4" offset="0.4646840148698885" />
+                  <Stop color="#7a629cf0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button blendMode="EXCLUSION" layoutX="389.0" layoutY="349.0" mnemonicParsing="false" onAction="#quitProgram" style="-fx-background-radius: 30;" text="LOG OUT">
+         <font>
+            <Font name="Apple LiGothic Medium" size="24.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ff1515" />
+                  <Stop color="#1c6466" offset="0.4646840148698885" />
+                  <Stop color="#57d61cf0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Label layoutX="16.0" prefHeight="105.0" prefWidth="544.0" text="Hotel    Management   System" textAlignment="CENTER" textOverrun="CLIP">
+         <font>
+            <Font name="Monaco" size="32.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ff1515" />
+                  <Stop color="#2c7ac7" offset="0.4646840148698885" />
+                  <Stop color="#57d61cf0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <PasswordField fx:id="userPasswordTextField" layoutX="315.0" layoutY="283.0" promptText="user password" style="-fx-background-color: #3CBC8D; -fx-background-radius: 15;" />
+      <Text fx:id="errorMessageTx" layoutX="82.0" layoutY="359.0" strokeType="OUTSIDE" strokeWidth="0.0" text="the username or password doesn't match!" visible="false">
+         <font>
+            <Font name="Wawati TC Regular" size="28.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#ff1515" />
+                  <Stop color="#20f5e5" offset="0.4646840148698885" />
+                  <Stop color="#57d61cf0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <ImageView fitHeight="27.0" fitWidth="150.0" layoutX="98.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/login.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="27.0" layoutX="260.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/register.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="27.0" fitWidth="150.0" layoutX="433.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logout.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="82.0" fitWidth="150.0" layoutX="246.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/hotel.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

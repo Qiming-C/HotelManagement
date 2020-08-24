@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="431.0" prefWidth="888.0" style="-fx-background-color: #DDFCA8; -fx-border-width: 5; -fx-border-color: #FFC294;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupproject.controllers.FoodControllerForClient">
+   <children>
+      <Button layoutX="21.0" layoutY="345.0" mnemonicParsing="false" onAction="#mAdd" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #BEFF4E; -fx-background-radius: 30; -fx-border-color: #056CB6; -fx-border-radius: 30; -fx-border-width: 2;" text="Add">
+         <font>
+            <Font name="Monaco" size="13.0" />
+         </font></Button>
+      <Button layoutX="365.0" layoutY="392.0" mnemonicParsing="false" onAction="#mEnter" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #BEFF4E; -fx-background-radius: 30; -fx-border-color: #056CB6; -fx-border-radius: 300; -fx-border-width: 2;" text="Enter">
+         <font>
+            <Font name="Monaco" size="13.0" />
+         </font></Button>
+      <Button layoutX="365.0" layoutY="345.0" mnemonicParsing="false" onAction="#mDelete" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #BEFF4E; -fx-background-radius: 30; -fx-border-color: #056CB6; -fx-border-radius: 30; -fx-border-width: 2;" text="Delete">
+         <font>
+            <Font name="Monaco" size="13.0" />
+         </font></Button>
+      <TableView fx:id="displayList" layoutX="21.0" layoutY="116.0" prefHeight="213.0" prefWidth="301.0" style="-fx-background-color: transparent;">
+        <columns>
+          <TableColumn fx:id="listType" prefWidth="78.0" text="Type" />
+          <TableColumn fx:id="listName" prefWidth="127.0" text="Name" />
+            <TableColumn fx:id="listPrices" prefWidth="95.0" text="Price" />
+        </columns>
+      </TableView>
+      <TableView fx:id="FoodListView" layoutX="356.0" layoutY="116.0" prefHeight="213.0" prefWidth="515.0" style="-fx-background-color: transparent;">
+        <columns>
+          <TableColumn fx:id="orderType" prefWidth="127.0" text="Order Type" />
+            <TableColumn fx:id="orderName" prefWidth="124.0" text="Order Name" />
+            <TableColumn fx:id="orderQuantity" prefWidth="135.0" text="Quantity" />
+            <TableColumn fx:id="orderPrices" prefWidth="121.0" text="Prices" />
+        </columns>
+      </TableView>
+      <Label layoutX="307.0" layoutY="41.0" prefHeight="56.0" prefWidth="275.0" text="Food Order">
+         <font>
+            <Font name="Monaco" size="44.0" />
+         </font>
+      </Label>
+      <Label layoutX="150.0" layoutY="346.0" prefHeight="25.0" prefWidth="83.0" text="Quantity :">
+         <font>
+            <Font name="Monaco" size="13.0" />
+         </font></Label>
+      <Label layoutX="514.0" layoutY="346.0" prefHeight="31.0" prefWidth="83.0" text="Total :  $">
+         <font>
+            <Font name="Monaco" size="13.0" />
+         </font></Label>
+      <Label fx:id="mTotalPrice" layoutX="609.0" layoutY="349.0" prefHeight="25.0" prefWidth="64.0" text="  " />
+      <Label layoutX="675.0" layoutY="392.0" prefHeight="25.0" prefWidth="83.0" text="First Name">
+         <font>
+            <Font name="Monaco" size="13.0" />
+         </font></Label>
+      <Label layoutX="514.0" layoutY="392.0" prefHeight="25.0" prefWidth="46.0" text="Room">
+         <font>
+            <Font name="Monaco" size="13.0" />
+         </font></Label>
+      <TextField fx:id="mRoom" layoutX="560.0" layoutY="392.0" prefHeight="25.0" prefWidth="98.0" promptText="roomNumber" style="-fx-background-color: #F6DA76; -fx-background-radius: 30;" />
+      <TextField fx:id="mFirst" layoutX="764.0" layoutY="392.0" prefHeight="25.0" prefWidth="98.0" promptText="firstName" style="-fx-background-color: #F6DA76; -fx-background-radius: 30;" />
+      <TextField fx:id="mFoodQuantity" layoutX="238.0" layoutY="345.0" prefHeight="31.0" prefWidth="76.0" promptText="quantity" style="-fx-background-color: #BEFF4E; -fx-background-radius: 30; -fx-border-color: #F6DA76; -fx-border-radius: 30; -fx-border-width: 2;" />
+      <ImageView fitHeight="73.0" fitWidth="150.0" layoutX="577.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/food.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="83.0" layoutX="229.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/food2.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="errorMessage" fill="#eb4d4d" layoutX="11.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="320.2060546875">
+         <font>
+            <Font name="Monaco" size="20.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

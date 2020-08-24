@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" style="-fx-background-color: #747475;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupproject.controllers.MainStageController">
+   <children>
+      <Label layoutX="16.0" layoutY="590.0" text="Email Address:" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstNameTextField" blendMode="MULTIPLY" layoutX="170.0" layoutY="469.0" style="-fx-text-inner-color: #644200;">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="lastNameTextField" blendMode="MULTIPLY" layoutX="170.0" layoutY="499.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="373.0" layoutY="472.0" text="Check-in-Date:" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="roomTypeChoice" blendMode="MULTIPLY" layoutX="527.0" layoutY="530.0" prefHeight="27.0" prefWidth="184.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ComboBox>
+      <Label layoutX="372.0" layoutY="561.0" text="Room Number:" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="372.0" layoutY="590.0" text="Room Price:" textFill="#fcfcfc">
+         <font>
+            <Font name="Monaco" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="531.0" text="PhoneNumber:" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="558.0" text="Address:" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="373.0" layoutY="504.0" text="Check-out-Date:" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="373.0" layoutY="531.0" text="Room Type:" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="470.0" text="First Name:" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="502.0" text="Last Name:" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="17.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="checkInDatePicker" blendMode="MULTIPLY" layoutX="527.0" layoutY="471.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </DatePicker>
+      <DatePicker fx:id="checkOutDatePicker" blendMode="MULTIPLY" layoutX="527.0" layoutY="501.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </DatePicker>
+      <TextField fx:id="phoneTextField" blendMode="MULTIPLY" layoutX="170.0" layoutY="529.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addressTextField" blendMode="MULTIPLY" layoutX="170.0" layoutY="559.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="emailTextField" blendMode="MULTIPLY" layoutX="170.0" layoutY="589.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="roomNumberTextField" blendMode="MULTIPLY" layoutX="528.0" layoutY="560.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="roomPriceTextField" blendMode="MULTIPLY" layoutX="528.0" layoutY="590.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <MenuBar fx:id="menuBar" layoutY="3.0" prefHeight="32.0" prefWidth="1040.0" style="-fx-background-color: #2C3235;">
+        <menus>
+          <Menu mnemonicParsing="false" style="-fx-background-color: #C4DAED; -fx-background-radius: 30;" text="User">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#backToLogin" text="log out" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" style="-fx-background-color: #C4DAED; -fx-background-radius: 30;" text="Room Status">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#loadingRoomStage" text="roomDetails" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane layoutY="35.0" prefHeight="425.0" prefWidth="1032.0" style="-fx-background-color: #cacfd1;">
+         <children>
+            <TableView fx:id="roomTableView" blendMode="DARKEN" layoutX="714.0" prefHeight="425.0" prefWidth="327.0" style="-fx-background-color: #303539; -fx-border-color: #a8a477; -fx-border-width: 2;">
+              <columns>
+                <TableColumn fx:id="roomNumCol" prefWidth="92.0" text="Room No" />
+                <TableColumn fx:id="roomTypeCol" prefWidth="119.315185546875" text="Room Type" />
+                  <TableColumn fx:id="roomPriceCol" prefWidth="108.684814453125" text="Room Price" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tableView" blendMode="DARKEN" layoutX="-1.0" prefHeight="425.0" prefWidth="716.0" style="-fx-background-color: #303539; -fx-border-color: #a8a477; -fx-border-width: 2;">
+              <columns>
+                <TableColumn fx:id="firstNameCol" prefWidth="86.0" text="First Name" />
+                <TableColumn fx:id="lastNameCol" text="LastName" />
+                  <TableColumn fx:id="phoneCol" prefWidth="90.0" text="PhoneNum" />
+                  <TableColumn fx:id="addressCol" prefWidth="110.0" text="Address" />
+                  <TableColumn fx:id="emailCol" prefWidth="132.0" text="Email Address" />
+                  <TableColumn fx:id="checkInCol" prefWidth="97.0" text="Check-In Date" />
+                  <TableColumn fx:id="checkOutCol" prefWidth="112.0" text="Check-out Date" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="730.0" layoutY="571.0" text="Tax(7%):" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="13.0" />
+         </font></Label>
+      <Label layoutX="730.0" layoutY="595.0" text="Total:" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="13.0" />
+         </font></Label>
+      <Label layoutX="730.0" layoutY="550.0" text="FoodExpense:" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="13.0" />
+         </font></Label>
+      <Label layoutX="731.0" layoutY="528.0" text="RoomExpense:" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="13.0" />
+         </font></Label>
+      <Label layoutX="730.0" layoutY="504.0" text="Days:" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="13.0" />
+         </font></Label>
+      <Label layoutX="731.0" layoutY="476.0" text="Room Fee per night:" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="13.0" />
+         </font></Label>
+      <Text fx:id="roomFeeText" fill="#73bbda" layoutX="895.0" layoutY="489.0" strokeType="OUTSIDE" strokeWidth="0.0" text="price" wrappingWidth="100.0">
+         <font>
+            <Font name="Charter Black Italic" size="14.0" />
+         </font></Text>
+      <Text fx:id="foodExpenseText" fill="#73bbda" layoutX="896.0" layoutY="563.0" strokeType="OUTSIDE" strokeWidth="0.0" text="foodExpense" wrappingWidth="100.0">
+         <font>
+            <Font name="Charter Black" size="14.0" />
+         </font></Text>
+      <Text fx:id="taxText" fill="#73bbda" layoutX="897.0" layoutY="584.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tax" wrappingWidth="100.0">
+         <font>
+            <Font name="Charter Black" size="14.0" />
+         </font></Text>
+      <Text fx:id="totalText" fill="#73bbda" layoutX="897.0" layoutY="608.0" strokeType="OUTSIDE" strokeWidth="0.0" text="total" wrappingWidth="100.0">
+         <font>
+            <Font name="Charter Black" size="14.0" />
+         </font></Text>
+      <Text fx:id="roomExpenseText" fill="#73bbda" layoutX="896.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="roomExpense" wrappingWidth="100.0">
+         <font>
+            <Font name="Charter Black" size="14.0" />
+         </font></Text>
+      <Text fx:id="daysText" fill="#73bbdac2" layoutX="896.0" layoutY="518.0" strokeType="OUTSIDE" strokeWidth="0.0" text="days:" wrappingWidth="100.0">
+         <font>
+            <Font name="Charter Black" size="13.0" />
+         </font></Text>
+      <Text fx:id="errorMessageText" disable="true" fill="#9dff1c" layoutX="42.0" layoutY="641.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The customer or The room is already checked In!" visible="false">
+         <font>
+            <Font name="Monaco" size="24.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutY="657.0" prefHeight="106.0" prefWidth="1040.0" style="-fx-background-color: #2b3133; -fx-border-color: #a8a477; -fx-border-width: 4;">
+         <children>
+            <Button layoutX="21.0" layoutY="8.0" mnemonicParsing="false" onAction="#checkIn" style="-fx-background-radius: 30; -fx-background-color: #222728; -fx-border-color: #a8a477; -fx-border-width: 3; -fx-border-radius: 30;" text="CHECK IN ">
+               <font>
+                  <Font name="PT Sans Narrow Bold" size="25.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#487d85" />
+                        <Stop color="#487d85" offset="0.21933085501858726" />
+                        <Stop color="#309695" offset="0.3605947955390331" />
+                        <Stop color="WHITE" offset="0.769516728624535" />
+                        <Stop color="#0d8c80" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button layoutX="269.0" layoutY="8.0" mnemonicParsing="false" onAction="#checkingOut" prefHeight="56.0" prefWidth="154.0" style="-fx-background-radius: 30; -fx-background-color: #222728; -fx-border-color: #a8a477; -fx-border-radius: 30; -fx-border-width: 3;" text="CHECK OUT">
+               <font>
+                  <Font name="PT Sans Narrow Bold" size="25.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#0d558c" />
+                        <Stop color="#5cd1cd" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button layoutX="543.0" layoutY="8.0" mnemonicParsing="false" onAction="#loadingRecord" prefHeight="56.0" prefWidth="143.0" style="-fx-background-radius: 30; -fx-background-color: #222728; -fx-border-color: #a8a477; -fx-border-width: 3; -fx-border-radius: 30;" text="LOADING">
+               <font>
+                  <Font name="PT Sans Narrow Bold" size="25.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#0d708c" />
+                        <Stop color="#0d708c" offset="0.4907063197026022" />
+                        <Stop color="WHITE" offset="0.8475836431226765" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <Button layoutX="797.0" layoutY="8.0" mnemonicParsing="false" onAction="#loggingOut" prefHeight="56.0" prefWidth="137.0" style="-fx-background-radius: 30; -fx-background-color: #222728; -fx-border-color: #a8a477; -fx-border-radius: 30; -fx-border-width: 3;" text="LOG OUT">
+               <font>
+                  <Font name="PT Sans Narrow Bold" size="25.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#0d708c" />
+                        <Stop color="#0d708c" offset="0.4907063197026022" />
+                        <Stop color="WHITE" offset="0.8475836431226765" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+            <ImageView fitHeight="72.0" fitWidth="34.0" layoutX="69.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/check-in.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="32.0" fitWidth="150.0" layoutX="331.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/check-out.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="32.0" layoutX="604.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/loading.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="32.0" layoutX="850.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/close.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="registerPane" prefHeight="427.0" prefWidth="579.0" style="-fx-background-color: #212323; -fx-border-color: #D79111; -fx-border-width: 3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="groupproject.controllers.RegisterViewController">
+   <children>
+      <Label layoutX="133.0" layoutY="145.0" text="UserID:" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="133.0" layoutY="204.0" text="Password:" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="32.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userIDRegister" layoutX="309.0" layoutY="148.0" prefHeight="37.0" prefWidth="146.0" promptText="user id" style="-fx-background-radius: 30;">
+         <font>
+            <Font name="Monaco" size="17.0" />
+         </font></TextField>
+      <PasswordField fx:id="passwordRegister" layoutX="311.0" layoutY="204.0" promptText="password" style="-fx-background-radius: 30;">
+         <font>
+            <Font name="Monaco" size="17.0" />
+         </font></PasswordField>
+      <Button layoutX="131.0" layoutY="283.0" mnemonicParsing="false" onAction="#registerBt" prefHeight="54.0" prefWidth="157.0" style="-fx-background-radius: 30; -fx-background-color: #151616; -fx-border-color: #e5a837; -fx-border-radius: 30;" text="Register" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="341.0" layoutY="283.0" mnemonicParsing="false" onAction="#exitBt" prefHeight="56.0" prefWidth="114.0" style="-fx-background-radius: 30; -fx-background-color: #151616; -fx-border-radius: 30; -fx-border-color: #e5a837;" text="Exit" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Label layoutX="170.0" layoutY="59.0" text="Registration" textFill="WHITE">
+         <font>
+            <Font name="Monaco" size="34.0" />
+         </font>
+      </Label>
+      <Text fx:id="errorText" fill="#e81c1c" layoutX="-186.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName is already used,try another userName!" visible="false">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="48.0" fitWidth="29.0" layoutX="198.0" layoutY="338.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/register2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="48.0" fitWidth="29.0" layoutX="386.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/exit.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="72.0" fitWidth="75.0" layoutX="95.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/user.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
